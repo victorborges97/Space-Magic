@@ -100,7 +100,10 @@ local function fireLaser()
     } )
 end
 
-nave:addEventListener( "tap", fireLaser )
+-- nave:addEventListener( "tap", fireLaser );
+
+-- Disparar automaticamente a cada 500ms (meio segundo)
+local fireTimer = timer.performWithDelay(300, fireLaser, 0) -- 0 significa infinito
 
 
 local function novoinimigo()
